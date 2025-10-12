@@ -88,3 +88,6 @@ jspm_packages/
 
 # Test files
 test-api.html
+
+# Vercel
+.vercel
