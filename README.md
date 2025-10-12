@@ -1,6 +1,27 @@
-# Empowering Health - Community-Focused Digital Platform
+# 🏥 Empowering Health - Community-Focused Digital Platform
+
+[![React](https://img.shields.io/badge/React-19.2.0-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF.svg)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.18-38B2AC.svg)](https://tailwindcss.com/)
+[![Express](https://img.shields.io/badge/Express-5.1.0-000000.svg)](https://expressjs.com/)
 
 A comprehensive multi-page React web application designed to promote health awareness, community engagement, and immediate assistance. This project demonstrates modern web development practices with a focus on user experience and community health.
+
+## 🌟 Live Demo
+
+**Frontend**: http://localhost:5173  
+**Backend API**: http://localhost:3001
+
+## 📸 Screenshots
+
+### Homepage
+![Homepage](https://via.placeholder.com/800x400/0ea5e9/ffffff?text=Empowering+Health+Homepage)
+
+### Preventive Healthcare
+![Preventive Healthcare](https://via.placeholder.com/800x400/22c55e/ffffff?text=Preventive+Healthcare+Page)
+
+### Community Engagement
+![Community Engagement](https://via.placeholder.com/800x400/8b5cf6/ffffff?text=Community+Engagement+Page)
 
 ## 🎯 Project Overview
 
