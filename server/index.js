@@ -177,6 +177,14 @@ app.get('/', (req, res) => {
   res.json({ message: 'Empowering Health API Server is running!' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Only start listening when this file is run directly (local dev).
+// When deployed as a serverless function (Vercel), the platform will import
+// this module and invoke the exported app without calling listen().
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+// Export the Express app so platforms (like Vercel) can use it as a function.
+module.exports = app;

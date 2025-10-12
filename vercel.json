@@ -10,9 +10,18 @@
       }
     }
   ],
+  "build": {
+    "env": {
+      "VITE_API_URL": "https://empowering-health-api.vercel.app"
+    }
+  },
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "^/api/(.*)$",
+      "dest": "/server/index.js"
+    },
+    {
+      "src": "^/(.*)$",
       "dest": "/index.html"
     }
   ],
