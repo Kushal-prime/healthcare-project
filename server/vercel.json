@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "empowering-health-api",
   "builds": [
     {
       "src": "index.js",
