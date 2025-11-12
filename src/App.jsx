@@ -10,6 +10,8 @@ import ImmediateAssistance from './pages/ImmediateAssistance';
 import InformationAwareness from './pages/InformationAwareness';
 import AdvancingHealthcare from './pages/AdvancingHealthcare';
 import ContactAbout from './pages/ContactAbout';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
             <Route path="/information-awareness" element={<InformationAwareness />} />
             <Route path="/advancing-healthcare" element={<AdvancingHealthcare />} />
             <Route path="/contact-about" element={<ContactAbout />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </motion.main>
         <Footer />

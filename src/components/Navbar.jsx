@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, Heart, Stethoscope } from 'lucide-react';
+import { Menu, X, Heart } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,20 +37,37 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
+          <div className="hidden md:flex items-center space-x-8">
+            <div className="flex items-center space-x-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                    location.pathname === item.path
+                      ? 'text-primary-600 bg-primary-50'
+                      : 'text-gray-600 hover:text-primary-600 hover:bg-gray-50'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+
+            <div className="flex items-center space-x-3">
               <Link
-                key={item.name}
-                to={item.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  location.pathname === item.path
-                    ? 'text-primary-600 bg-primary-50'
-                    : 'text-gray-600 hover:text-primary-600 hover:bg-gray-50'
-                }`}
+                to="/login"
+                className="px-4 py-2 text-sm font-semibold text-gray-600 transition-colors duration-200 hover:text-primary-600"
               >
-                {item.name}
+                Log in
               </Link>
-            ))}
+              <Link
+                to="/signup"
+                className="px-4 py-2 rounded-full bg-gradient-to-r from-primary-500 to-health-500 text-white text-sm font-semibold shadow-md hover:shadow-lg transition-transform duration-200 hover:-translate-y-0.5"
+              >
+                Sign up
+              </Link>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -87,6 +104,22 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
+              <div className="pt-4 border-t border-gray-100">
+                <Link
+                  to="/login"
+                  className="block px-3 py-2 rounded-md text-base font-semibold text-gray-600 hover:text-primary-600 hover:bg-gray-50 transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Log in
+                </Link>
+                <Link
+                  to="/signup"
+                  className="mt-2 block px-3 py-2 rounded-lg text-base font-semibold text-white bg-gradient-to-r from-primary-500 to-health-500 shadow-md hover:shadow-lg transition"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Sign up
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}
